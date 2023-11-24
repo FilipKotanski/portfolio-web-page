@@ -2,7 +2,7 @@
 
 
 
-[![Overview](../images/Screenshot%202023-11-24%20144808.png)](https://filipkotanski.github.io/portfolio-web-page/)
+[![Overview](./images/Screenshot%202023-11-24%20144808.png)](https://filipkotanski.github.io/portfolio-web-page/)
 
 ## Overview
 
@@ -17,6 +17,8 @@ Hi all, I'm Filip, an aspiring front-end web developer with a keen eye for desig
    b. CSS
    
    c. JavaScript
+
+   d. Python/Django
 - **Projects:** 
 
     a. [Prework](https://filipkotanski.github.io/prework-study-guide/)
