@@ -2,44 +2,130 @@
 <html lang="en-gb">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Filip Kotanski // Web Developer</title>
+  <link rel="stylesheet" href="./css/style.css" />
+
 </head>
 
-<body>
+<body class="page-layout">
   <!-- main logo / nav -->
   <header>
-    <h1>Lernantino</h1>
-    <nav>
+
+    <figure id="avatar">
+      <img src="./images/snow_leopard.png" alt="snow leopard">
+      <figcaption>Filip Kotanski</figcaption>
+    </figure>
+    
+    <nav id="page-nav-bar" class="nav-bar glow">
+      <a href="#about">About me</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact me</a>
+      <a href="#">Resume</a>
     </nav>
+
   </header>
 
   <!-- hero banner -->
   <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
-    </div>
+
+    <figure id="hero-image">
+      <img  src="./images/1700212546924.jpg" alt="Valais Switzerland">
+      <div class="move-bottom-right image-title">
+        Valais Switzerland
+      </div>
+    </figure>
+
   </section>
 
   <main class="page-wrapper">
     <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
+    <section class="page-section" >
+
+      <h2 id="about" class="vertical-line">About Me</h2>
+
+      <p id="personal-profile" >
+        Hello there! I'm Filip, an aspiring web developer with a love for crafting beautiful and functional websites.
+        My journey into the world of coding began with a curiosity to bring ideas to life in the digital realm.
+        I thrive on turning complex problems into elegant, user-friendly solutions. Proficient in HTML, CSS, and JavaScript, 
+        I enjoy the challenge of building responsive and dynamic web applications. Whether it's designing an intuitive user interface
+        or implementing robust backend functionalities, I am dedicated to creating seamless digital experiences.
+        Beyond the screen, you'll often find me chasing adventures in the mountains. I believe in the power of nature to inspire creativity and resilience.
+        Hiking, climbing, mountaineeering and capturing the breathtaking landscapes with my camera are some of my favorite ways to unwind and recharge.
+      </p>
+
     </section>
 
     <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
+    <section class="page-section" >
+
+      <h2 id="work" class="vertical-line"">Work</h2>
+
+      <div class="portfolio-gallery" >
+        <figure id="Allalinhorn">
+          <a href="https://filipkotanski.github.io/prework-study-guide/" target="_blank">
+            <img  src="./images/Allalinhorn.jpg" alt="Allalinhorn">
+          </a>
+          <div class="image-title move-bottom-left">
+            <big><b>Prework</b></big><br><small>HTML/CSS/JavaScript</small>
+          </div>
+        </figure>
+        <figure>
+          <a href="https://filipkotanski.github.io/Horiseon/" target="_blank">  
+            <img id="Matterhorn"  src="./images/Matterhorn.jpg" alt="Matterhorn">
+          </a>
+          <div class="image-title move-bottom-left">
+            <big><b>Search engine optimization</b></big><br><small>HTML/CSS</small>
+          </div>
+        </figure>
+        <figure>
+          <a href="#">  
+            <img id="Rimpfischhorn" src="./images/Rimpfischhorn.jpg" alt="Rimpfischhorn" target="_blank">
+          </a>
+          <div class="image-title move-bottom-left">
+            <big><b>LED Wall</b></big><br><small>Node/IoT</small>
+          </div>
+        </figure>
+        <figure>
+          <a href="#">
+            <img id="Weissmies" src="./images/Weissmies.jpg" alt="Weissmies" target="_blank">
+          </a>
+          <div class="image-title move-bottom-left">
+            <big><b>Calculator</b></big><br><small>React/JavaScript/CSS</small>
+          </div>
+        </figure>
+        <figure>
+          <a href="#">
+            <img id="Nadelhorn" src="./images/Nadelhorn.jpg" alt="Nadelhorn" target="_blank">
+          </a>
+          <div class="image-title move-bottom-left">
+            <big><b>Pastel Puzzels</b></big><br><small>MERN Stack</small>
+          </div>
+        </figure>
+
+      </div>
+
     </section>
 
     <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
+    <section class="page-section" >
+
+      <h2 id="contact" class="vertical-line">Contact Me</h2>
+
+      <nav id="links-nav-bar"class="nav-bar glow">
+        <a href="tel:+447874386642">Call me</a>
+        <a href="mailto:filip.kotanski@gmail.com">Send me an email</a>
+        <a href="https://github.com/FilipKotanski" target="_blank">GitHub</a>
+        <a href="https://twitter.com/Filip_Kotanski" target="_blank">Twitter</a>
+      </nav>
+
     </section>
+
   </main>
+
 </body>
 
 </html>
