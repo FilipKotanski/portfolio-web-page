@@ -1,3 +1,14 @@
+:root{
+
+  --primary-border: 0.25vw solid coral;
+  --smooth-effects: all 0.5s ease-in;
+  --links-color-on-hover:  rgb(244, 13, 1);
+  --links-underline-on-hover: 0.25vw solid rgb(244, 13, 1);
+  --links-glow-on-hover: 0px 0px 30px rgb(254, 32, 2);
+  --links-border-on-hover: 0.25vw solid rgb(244, 13, 1);
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -7,17 +18,284 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: lightblue;
+  opacity: 0.95;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+header, .page-wrapper, .page-section, .hero-banner{
+  display: contents;
+
+}
+
+
+#hero-image{
+  position: relative;
+  height: 85vh;
+}
+
+.image-title{
+  position: absolute;
+  font-size: 2vh;
+  color: lightblue;
+  font-family: cursive;
+  font-style: italic;
+  padding: 1vw;
+  background-color: coral;
+  border: 0.25vw solid lightblue;
+  border-radius: 15px;
+ 
+}
+
+.move-bottom-right{
+  bottom: 2vh;
+  right: 3vw;
+}
+
+.move-bottom-left{
+  bottom: 2vh;
+  left: 3vh;
+}
+
+figcaption{
+  margin-left: 65px;
+  font-size: 18px;
+
+}
+
+.nav-bar{
+  /* stretches nav-bar horizontally within its grid cell so that spacing between a tags can be set */
+  justify-self:stretch;
+  align-items: flex-end;
+
+  margin-bottom: 3vh;
+
+  /* setting spacing between a tags */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#hero-image img, .portfolio-gallery img{
+  /*stretching image to the max within of the containing grid cells*/
+  width: 100%;
+  height: 100%;
+  border: var(--primary-border);
+}
+
+
+.vertical-line{
+  border-right: var(--primary-border);
+  padding-right: 30px;
+  margin-right: 10px;
+}
+
+
+.page-layout{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 150px 1fr;
+  grid-template-areas: 
+  "avatar page-nav-bar"
+  "hero-image hero-image"
+  "about personal-profile"
+  "work portfolio-gallery"
+  "contact links-nav-bar"; 
+  gap: 3vh;
+}
+
+#avatar{
+  grid-area: avatar;
+}
+
+#page-nav-bar{
+  grid-area: page-nav-bar;
+}
+
+#hero-image{
+  grid-area: hero-image;
+}
+
+#about{
+  grid-area: about;
+}
+
+#personal-profile{
+  grid-area: personal-profile;
+}
+
+#work{
+  grid-area: work;
+}
+
+.portfolio-gallery{
+  grid-area: portfolio-gallery;
+}
+
+#contact{
+  grid-area: contact;
+}
+
+#links-nav-bar{
+  grid-area: links-nav-bar;
+}
+
+#personal-profile{
+  text-align: center;
+  font-size: 3vh;
+}
+
+.portfolio-gallery{
+  width: 65%;
+  justify-self: center;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "Allalinhorn Allalinhorn"
+  "Matterhorn Rimpfischhorn"
+  "Weissmies Nadelhorn";
+  gap: 3vh; 
+}
+
+#Allalinhorn{
+  grid-area: Allalinhorn;
+}
+
+#Matterhorn{
+  grid-area: Matterhorn;
+}
+
+#Rimpfischhorn{
+  grid-area: Rimpfischhorn;
+}
+
+#Weissmies{
+  grid-area: Weissmies;
+}
+
+#Nadelhorn{
+  grid-area: Nadelhorn;
+}
+
+figure{
+  position: relative;
+  width: 100%;
+  height: 100%;
   margin: 0;
+}
+
+
+.portfolio-gallery figure{
+  transition: var(--smooth-effects);
+  height: 100%; 
+}
+
+.portfolio-gallery figure:hover{
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+h2 {
+  margin: 0;
+  text-align: right;
 }
 
 p {
   margin: 0;
+}
+
+
+ .nav-bar a{
+  text-decoration: none;
+  color: coral;
+  border-bottom: var(--primary-border);
+  -moz-transition: var(--smooth-effects);
+  -o-transition: var(--smooth-effects);
+  -webkit-transition: var(--smooth-effects);
+  transition: var(--smooth-effects);
+}
+
+
+.nav-bar a:hover {
+  color: var(--links-color-on-hover);
+  border-bottom: var(--links-underline-on-hover);
+  text-shadow: var(--links-glow-on-hover);
+  -moz-transition: var(--smooth-effects);
+  -o-transition: var(--smooth-effects);
+  -webkit-transition: var(--smooth-effects);
+  transition: var(--smooth-effects);
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  .page-layout{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "avatar"
+    "page-nav-bar"
+    "hero-image"
+    "about" 
+    "personal-profile"
+    "work"
+    "portfolio-gallery"
+    "contact"
+    "links-nav-bar";  
+  }
+
+  #hero-image{
+    height: 45vh;
+  }
+
+  
+  .portfolio-gallery{
+    width:95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "Allalinhorn"
+    "Matterhorn"
+    "Rimpfischhorn"
+    "Weissmies"
+    "Nadelhorn";
+    justify-self: center;
+  }
+  
+
+  .image-title{
+    font-size: 2.5vh;
+  }
+
+
+  .nav-bar{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+  .nav-bar a{
+    border: var(--primary-border);
+    margin: 1vw;
+    transition: var(--smooth-effects);
+    width: 80%;
+  }
+
+  .nav-bar a:hover{
+    transform: scale(1.1);
+    border: var(--links-border-on-hover);
+  }
+  
+
+  h2{
+    text-align: center;
+    border: var(--primary-border);
+  }
+
+  .vertical-line{
+    padding-left: 30px;
+    margin-left: 10px;
+  }  
 }
